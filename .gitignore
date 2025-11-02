@@ -62,3 +62,6 @@ kubeconfig
 .gitattributes
 
 *.old
+
+local/
+.local/
