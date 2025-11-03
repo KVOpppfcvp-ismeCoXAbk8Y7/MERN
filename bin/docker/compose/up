@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+
+main() {
+    pushd ~/MERN-dev
+
+    docker compose --env-file .env up -d --build
+
+    popd
+    exit 0
+}
+
+main

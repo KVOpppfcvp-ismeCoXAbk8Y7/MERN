@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+
+main() {
+    pushd ~/MERN-dev
+
+    docker compose logs -f mongo express vite nginx
+
+    popd
+    exit 0
+}
+
+main
