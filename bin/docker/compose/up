@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 main() {
-    pushd ~/MERN-dev
+    pushd ~/MERN
 
     docker compose --env-file .env up -d --build
 

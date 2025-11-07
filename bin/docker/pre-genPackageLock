@@ -4,7 +4,6 @@ main() {
     local service="$1"
 
     case "$service" in
-        "mongo");;
         "express");;
         "vite");;
         *)
@@ -14,10 +13,11 @@ main() {
 
     pushd ~/MERN
 
-    docker compose logs -f "$service"
+    docker run --rm -v "./${service}":/app -w /app node:22-alpine \
+        sh -c "npm install --package-lock-only"
 
     popd
     exit 0
 }
 
-main
+main "$@"
