@@ -11,7 +11,7 @@ if (!dbUser)
 if (!dbPassword)
     errorMessages.push(`${errorMessagePrefix} MONGO_PASSWORD not set`);
 if (errorMessages.length > 0)
-    throw new Error(errorMessages.join("\n");
+    throw new Error(errorMessages.join("\n"));
 
 const db = db.getSiblingDB(dbName);
 
@@ -21,5 +21,5 @@ db.createUser({
     roles: [{
         role: "readWrite",
         db: dbName,
-    ]},
+    }],
 });
